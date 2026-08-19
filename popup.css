@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 14px;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  color: #1f2328;
+  background: #fff;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+input, select, textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3px;
+  padding: 6px 8px;
+  font: inherit;
+  font-weight: 400;
+  border: 1px solid #cbd0d6;
+  border-radius: 6px;
+  background: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #6457c7;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row label {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: #6457c7;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #534ab7;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: default;
+}
+
+#message {
+  margin: 10px 0 0;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+#message.success {
+  background: #e1f5ee;
+  color: #085041;
+}
+
+#message.error {
+  background: #fcebeb;
+  color: #791f1f;
+}
+
+#message.warn {
+  background: #faeeda;
+  color: #633806;
+}
+
+#message a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+button.secondary {
+  width: auto;
+  margin: 0;
+  padding: 5px 10px;
+  font-weight: 500;
+  color: #534ab7;
+  background: #eeedfe;
+}
+
+button.secondary:hover {
+  background: #cecbf6;
+}
+
+.hint {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #777;
+}

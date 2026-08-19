@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Log this application</h1>
+    <button id="rescrape" class="secondary" title="Re-read the current page">↻ Rescrape</button>
+  </div>
+  <p id="scrape-source" class="hint hidden"></p>
+
+  <!-- Shown instead of the form until the options page is filled in -->
+  <div id="setup-notice" class="hidden">
+    <p>Almost ready — add your Apps Script URL and secret first.</p>
+    <button id="open-options">Open settings</button>
+  </div>
+
+  <form id="job-form" class="hidden">
+    <label>Job title
+      <input type="text" id="title" required>
+    </label>
+
+    <label>Company
+      <input type="text" id="company" required>
+    </label>
+
+    <div class="row">
+      <label>Location
+        <input type="text" id="location">
+      </label>
+      <label>Salary
+        <input type="text" id="salary" placeholder="if posted">
+      </label>
+    </div>
+
+    <div class="row">
+      <label>Status
+        <select id="status">
+          <option selected>Applied</option>
+          <option>Phone screen</option>
+          <option>Interview</option>
+          <option>Offer</option>
+          <option>Rejected</option>
+        </select>
+      </label>
+      <label>Date applied
+        <input type="date" id="dateApplied">
+      </label>
+    </div>
+
+    <label>Source URL
+      <input type="url" id="url">
+    </label>
+
+    <label>Job description
+      <textarea id="description" rows="8"
+        placeholder="Auto-scraped from the page. If empty: highlight the JD text on the page, then hit Rescrape."></textarea>
+    </label>
+
+    <label>Notes
+      <textarea id="notes" rows="2" placeholder="referral, cover letter, gut feeling..."></textarea>
+    </label>
+
+    <button type="submit" id="save-btn">Save to sheet</button>
+  </form>
+
+  <p id="message" class="hidden"></p>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
